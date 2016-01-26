@@ -1,0 +1,11 @@
+<%= simple_form_for(@student) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :clave_unica %>
+    <%= f.input :email %>
+    <%= f.input :points %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

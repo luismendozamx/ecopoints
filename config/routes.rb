@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'static_pages#home'
+  devise_for :users
+
+  devise_scope :user do
+    get 'login', to: 'devise/sessions#new', as: :login
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+  end
+
+  resources :students, only: [:index, :show, :edit, :update, :new, :create]
+  post 'students/find', to: 'students#find', as: 'students_find'
 end

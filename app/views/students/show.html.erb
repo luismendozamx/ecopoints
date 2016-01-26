@@ -1,0 +1,18 @@
+<div class="container">
+  <br />
+  <div class="row">
+    <% if current_user %>
+    <div class="col-sm-12">
+      <%= link_to "Edit", edit_student_path(@student.id) %>
+    </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Clave Única: <%= @student.clave_unica %></h1>
+      <h1>Email: <%= @student.email %></h1>
+      <h1>Puntos: <%= @student.points %></h1>
+    </div>
+  </div>
+
+</div>
