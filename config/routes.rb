@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
 
   resources :students, only: [:index, :show, :edit, :update, :new, :create]
-  post 'students/find', to: 'students#find', as: 'students_find'
+  get '/results', to: 'students#results', as: :public_results
 end

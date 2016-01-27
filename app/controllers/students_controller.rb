@@ -13,6 +13,15 @@ class StudentsController < ApplicationController
     respond_with(@students)
   end
 
+  def results
+    if params[:search]
+      @students = Student.search(params[:search]).order("clave_unica ASC")
+    else
+      @students = Student.all.order("clave_unica ASC")
+    end
+    respond_with(@students)
+  end
+
   def show
     respond_with(@student)
   end
