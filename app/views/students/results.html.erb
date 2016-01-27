@@ -2,7 +2,7 @@
   <div class="row">
     <br />
     <div class="col-sm-12">
-      <%= form_tag(students_path, :method => "get", :class => "form-inline") do %>
+      <%= form_tag(public_results_path, :method => "get", :class => "form-inline") do %>
         <div class="form-group">
           <%= text_field_tag :search, params[:search], placeholder: "Clave única", class: "form-control" %>
         </div>

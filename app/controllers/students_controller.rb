@@ -5,11 +5,7 @@ class StudentsController < ApplicationController
   before_action :is_admin?, only: [:index, :create, :edit, :new]
 
   def index
-    if params[:search]
-      @students = Student.search(params[:search]).order("clave_unica ASC")
-    else
-      @students = Student.all.order("clave_unica ASC")
-    end
+    @students = Student.all.order("clave_unica ASC")
     respond_with(@students)
   end
 
