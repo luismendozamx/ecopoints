@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ecopoints</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav id="main-nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><%= link_to "Estudiantes", students_path %></li>
+          <li><%= link_to "Agregar Nuevo", new_student_path %></li>
+          <li><%= link_to "Log Out", logout_path %></li>
+        <% end %>
+      </ul>
+    </div><!-- /.container-fluid -->
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>
+

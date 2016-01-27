@@ -18,15 +18,22 @@
 @import "bootstrap";
 
 #main-nav{
+  background-color: transparent;
+  border: none;
   margin-bottom: 0px;
 
-  .logo-nav{
-    height: 70px;
-    padding: 0px;
+  li a{
+    color: #fff;
   }
+}
 
-  .navbar-right{
-    padding-top: 30px;
-    padding-bottom: 30px;
+#main-hero{
+  color: #fff;
+  background-image: image-url("itam.jpg");
+  background-size: cover;
+  background-position: center center;
+
+  .logo{
+    width: 400px;
   }
 }

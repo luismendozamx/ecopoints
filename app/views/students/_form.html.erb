@@ -1,8 +1,8 @@
 <%= simple_form_for(@student) do |f| %>
   <div class="form-inputs">
-    <%= f.input :clave_unica %>
+    <%= f.input :clave_unica, required: true %>
     <%= f.input :email %>
-    <%= f.input :points %>
+    <%= f.input :points, required: true%>
   </div>
 
   <div class="form-actions">
